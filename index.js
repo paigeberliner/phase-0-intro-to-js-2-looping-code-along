@@ -1,21 +1,17 @@
-// Code your solutions in this file
-const names = ["Paige","Rachel","Maddie"];
-function writeCards(names, events) {
-    let newarray = []
-for (let i=0; i < names.length; i++) {
- newarray.push(`Thank you, ${names[i]}, for the wonderful ${events} gift!`); 
-}
-  return newarray;
+const names = ["name1", "name2", "name3"];
+
+function writeCards(names){
+    let newArray = [];
+    for (let i = 0; i < names.length; i++) {
+        newArray.push(`Thank you, ${names[i]}, for the wonderful surprise gift!`);
+    }
+    return newArray;
 }
 
 function countDown(n){
-if (n>=0){
-    console.log(n);
-    n--;
-    countDown(n);
+    if (n>=0){
+        console.log(n);
+        n--;
+        return countDown(n)
+    }
 }
-else {
-    return;
-}
-}
-countDown(10);
